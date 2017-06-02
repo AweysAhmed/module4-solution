@@ -41,11 +41,12 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
 // using the 'speak' method or either helloSpeaker's or byeSpeaker's
 // 'speak' method.
 // See Lecture 50, part 1
-for (var i = 0; names.length > 0; i++) {
-var firstLetter = names[i].toLowerCase();
-var firstLetter = firstLetter.charAt(0);
+for (var i = 0; names.length > i; i++) {
+var name = names[i];
+var nameHolder = name.toLowerCase();
+var firstLetter = nameHolder.charAt(0);
   // STEP 11:
-  // Retrieve the first letter of the current name in the loop.
+  // Retrieve the first letter of the current name in the loop.s
   // Use the string object's 'charAt' function. Since we are looking for
   // names that start with either upper case or lower case 'J'/'j', call
   // string object's 'toLowerCase' method on the result so we can compare
@@ -59,10 +60,10 @@ var firstLetter = firstLetter.charAt(0);
   // in the loop. Otherwise, call helloSpeaker's 'speak' method with the current
   // name in the loop.
   if ( firstLetter === "j") {
-    byeSpeaker.speak(i);
-    // byeSpeaker.xxxx
+    byeSpeaker.speak();
+
   } else {
-    // helloSpeaker.xxxx
-    helloSpeaker.speak(i);
+    
+    helloSpeaker.speak();
   }
 };
